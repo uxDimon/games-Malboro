@@ -1,0 +1,700 @@
+@import "normalize";
+@import "compass/css3";
+@import "variables";
+@import "fonts";
+@import "mixin";
+@import "breakpoint";
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  outline-style: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --swiper-theme-color: #8b2b34 !important;
+  --swiper-navigation-size: 50px !important;
+
+  @include breakpoint(phone) {
+    --swiper-navigation-size: 35px !important;
+  }
+}
+
+img {
+  @include noselect();
+}
+
+body {
+  overflow: hidden;
+  @include fontSize(16px);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+
+  @include breakpoint(big-phone-landscape) {
+    overflow: visible;
+    position: unset;
+  }
+
+  .wrapper-preloader {
+    background: url("../img/background.png") no-repeat;
+    height: 100%;
+    max-width: 37rem;
+    margin: 0 auto;
+
+    .pre-loader {
+      text-align: center;
+      width: 200px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      @include noselect();
+
+      p {
+        font-size: 40px;
+        font-weight: 100;
+        color: $color-white;
+        font-family: $NeulandGrotesk-CondensedRegular, $default-font-family;
+        @include noselect();
+      }
+
+      h1 {
+        color: $color-white;
+        font-size: 60px;
+        margin-top: 0;
+        @include noselect();
+
+        &.abs {
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
+
+      hr {
+        background: $color-white;
+        border: none;
+        height: 1px;
+      }
+
+      .color {
+        width: 0;
+        overflow: hidden;
+        color: $color-white;
+      }
+    }
+  }
+
+  main.wrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    //overflow: hidden;
+    max-width: 37rem;
+    margin: 0 auto;
+    position: relative;
+
+    .bg-image {
+      position: absolute;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    section.screen-1 {
+      width: 100%;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 37rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      header.logo {
+        max-width: 350px;
+        padding-bottom: 3rem;
+        @include noselect();
+
+        @include breakpoint(tab-land) {
+          max-width: 300px;
+        }
+
+        @include breakpoint(phone) {
+          max-width: 250px;
+          padding-bottom: 2rem;
+        }
+
+        @include breakpoint(small-phone) {
+          max-width: 170px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      h2.text-guide {
+        color: $color-white;
+        @include fontSize(40px);
+        font-family: $NeulandGrotesk-CondensedRegular;
+        text-transform: uppercase;
+        line-height: 115%;
+        letter-spacing: .1rem;
+        font-weight: 100;
+        text-shadow: 2px 2px 8px #000;
+
+        @include noselect();
+
+        @include breakpoint(tab-land) {
+          @include fontSize(26px);
+        }
+
+        @include breakpoint(phone) {
+          @include fontSize(20px);
+        }
+
+        @include breakpoint(small-phone) {
+          @include fontSize(15px);
+        }
+      }
+
+      figure.icon {
+        max-width: 60px;
+        margin-bottom: 2rem;
+        @include noselect();
+
+        @include breakpoint(phone) {
+          margin-bottom: 1rem;
+          max-width: 45px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      button.begin-game {
+        color: $color-white;
+        @include fontSize(27px);
+        outline: none;
+        font-family: $NeulandGrotesk-CondensedRegular;
+        text-transform: uppercase;
+        line-height: 110%;
+        letter-spacing: .1rem;
+        font-weight: 100;
+        background: $color-primary;
+        border: 2px solid $color-white;
+        padding: 1rem 2.5rem;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        @include breakpoint(tab-land) {
+          @include fontSize(19px);
+        }
+
+        @include breakpoint(phone) {
+          padding: 0.5rem 1.5rem;
+          @include fontSize(18px);
+        }
+
+        @include breakpoint(small-phone) {
+          padding: 0.3rem 1rem;
+          @include fontSize(14px);
+        }
+      }
+    }
+
+    .container {
+      display: none;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 25rem;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 9rem;
+
+      @include breakpoint(big-phone-landscape) {
+        bottom: -40rem;
+      }
+
+      @include breakpoint(phone) {
+        max-width: 16rem;
+      }
+
+      .progress {
+        border-radius: 30px;
+        background-color: rgba(255, 255, 255, 0.4);
+
+        .progress-bar {
+          height: 18px;
+          border-radius: 30px;
+          background-image: linear-gradient(to right, #fcc500, #ff4000);
+          transition: 0.4s linear;
+          transition-property: width, background-color;
+        }
+
+        &:before {
+          content: "1 MONTH";
+          position: absolute;
+          left: -20px;
+          bottom: -30px;
+          @include fontSize(16px);
+          color: $color-white;
+        }
+
+        &:after {
+          content: "18 MONTHS";
+          position: absolute;
+          right: -20px;
+          bottom: -30px;
+          @include fontSize(16px);
+          color: $color-white;
+        }
+      }
+
+      .progress-moved .progress-bar {
+        width: 0%;
+        background-image: linear-gradient(to right, #fcc500, #ff4000);
+        animation: progressAnimation 6s;
+      }
+
+      @keyframes progressAnimation {
+        /* 0% {
+           width: 5%;
+           background-color: #fcc500;
+         }
+         100% {
+           width: 100%;
+           background-color: #ff4000;
+         }
+       }*/
+      }
+    }
+
+    section.screen-2 {
+      display: none;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      max-width: 37rem;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      transform: translateY(-45%);
+
+      .game-start {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 72.5rem;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 8rem;
+
+        @include breakpoint(phone) {
+          padding-bottom: 0;
+        }
+
+        header.logo {
+          max-width: 205px;
+          padding-bottom: 5rem;
+          margin: 0 auto;
+          @include noselect();
+
+          @include breakpoint(tab-land) {
+            max-width: 195px;
+          }
+
+          @include breakpoint(phone) {
+            max-width: 145px;
+            padding-bottom: 4rem;
+          }
+
+          @include breakpoint(small-phone) {
+            max-width: 120px;
+            padding-bottom: 3rem;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        figure.icon {
+          max-width: 60px;
+          margin: 0 auto 4em auto;
+          @include noselect();
+
+          @include breakpoint(phone) {
+            margin-bottom: 3em;
+          }
+
+          @include breakpoint(small-phone) {
+            margin-bottom: 2em;
+            max-width: 45px;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        p.text-guide {
+          color: $color-white;
+          @include fontSize(35px);
+          font-family: $NeulandGrotesk-CondensedRegular;
+          text-transform: uppercase;
+          line-height: 100%;
+          letter-spacing: .1rem;
+          font-weight: 100;
+          text-shadow: 2px 2px 8px #000;
+          @include noselect();
+
+          @include breakpoint(tab-land) {
+            @include fontSize(26px);
+          }
+
+          @include breakpoint(phone) {
+            @include fontSize(18px);
+          }
+
+          @include breakpoint(small-phone) {
+            @include fontSize(15px);
+          }
+        }
+      }
+
+      .game-fail {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        max-width: 72.5rem;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 8rem;
+
+        @include breakpoint(tab-land) {
+          padding-bottom: 0;
+        }
+
+        header.logo {
+          max-width: 205px;
+          padding-bottom: 5rem;
+          margin: 0 auto;
+          @include noselect();
+
+          @include breakpoint(tab-land) {
+            max-width: 195px;
+          }
+
+          @include breakpoint(phone) {
+            max-width: 145px;
+            padding-bottom: 4rem;
+          }
+
+          @include breakpoint(small-phone) {
+            max-width: 120px;
+            padding-bottom: 3rem;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        figure.icon {
+          max-width: 60px;
+          margin: 0 auto 4em auto;
+          @include noselect();
+
+          @include breakpoint(phone) {
+            margin-bottom: 3em;
+          }
+
+          @include breakpoint(small-phone) {
+            margin-bottom: 2em;
+            max-width: 45px;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .text-guide {
+          color: $color-white;
+          @include fontSize(35px);
+          font-family: $NeulandGrotesk-CondensedRegular;
+          text-transform: uppercase;
+          line-height: 100%;
+          letter-spacing: .1rem;
+          font-weight: 100;
+          @include noselect();
+
+          @include breakpoint(tab-land) {
+            @include fontSize(26px);
+          }
+
+          @include breakpoint(phone) {
+            @include fontSize(18px);
+          }
+
+          @include breakpoint(small-phone) {
+            @include fontSize(15px);
+          }
+
+          h1 {
+            @include fontSize(45px);
+            margin: 0 0 0.7rem;
+            font-weight: 100;
+            @include noselect();
+
+            @include breakpoint(phone) {
+              @include fontSize(40px);
+              margin: 0 0 1rem;
+            }
+
+            @include breakpoint(small-phone) {
+              @include fontSize(37px);
+            }
+          }
+
+          p {
+            padding-bottom: 2rem;
+            @include fontSize(22px);
+            @include noselect();
+          }
+        }
+      }
+
+      .try-again--secondary {
+
+        @include breakpoint(phone) {
+          font-size: 16px !important;
+          padding: .5rem .9rem !important;
+        }
+      }
+
+      button.btn-specs {
+        color: $color-white;
+        @include fontSize(27px);
+        outline: none;
+        font-family: $NeulandGrotesk-CondensedRegular;
+        text-transform: uppercase;
+        line-height: 110%;
+        letter-spacing: .1rem;
+        font-weight: 100;
+        background: transparent;
+        border: 2px solid $color-white;
+        padding: 0.8rem 1.2rem;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        @include breakpoint(phone) {
+          @include fontSize(21px);
+        }
+
+        @include breakpoint(small-phone) {
+          @include fontSize(21px);
+          padding: 0.7rem 1rem;
+        }
+
+        p {
+          @include noselect();
+        }
+      }
+
+      .game-win {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        max-width: 72.5rem;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include breakpoint(tab-land) {
+          padding-bottom: 0;
+          justify-content: center;
+        }
+
+        @include breakpoint(phone) {
+          padding-bottom: 0;
+          justify-content: flex-end;
+        }
+
+        header.logo {
+          max-width: 205px;
+          padding-bottom: 5rem;
+          margin: 0 auto;
+          @include noselect();
+
+          @include breakpoint(tab-land) {
+            max-width: 195px;
+          }
+
+          @include breakpoint(phone) {
+            max-width: 145px;
+            padding-bottom: 2rem;
+          }
+
+          @include breakpoint(small-phone) {
+            max-width: 120px;
+            padding-bottom: 1rem;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        figure.icon {
+          max-width: 60px;
+          margin-bottom: 4em;
+          @include noselect();
+
+          @include breakpoint(phone) {
+            margin-bottom: 3em;
+          }
+
+          @include breakpoint(small-phone) {
+            margin-bottom: 2em;
+            max-width: 45px;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .text {
+          color: $color-white;
+          @include fontSize(35px);
+          font-family: $NeulandGrotesk-CondensedRegular;
+          text-transform: uppercase;
+          letter-spacing: .1rem;
+          font-weight: 100;
+          @include noselect();
+
+          @include breakpoint(tab-land) {
+            @include fontSize(26px);
+          }
+
+          @include breakpoint(phone) {
+            @include fontSize(18px);
+          }
+
+          @include breakpoint(small-phone) {
+            @include fontSize(15px);
+          }
+
+          h1 {
+            @include fontSize(46px);
+            font-weight: 100;
+            line-height: 110%;
+            margin: 0;
+            @include noselect();
+
+            @include breakpoint(phone) {
+              @include fontSize(35px);
+            }
+
+            @include breakpoint(small-phone) {
+              @include fontSize(30px);
+            }
+          }
+
+          p {
+            padding: 5rem 0;
+            @include fontSize(25px);
+            line-height: 110%;
+            @include noselect();
+
+            @include breakpoint(tab-land) {
+              padding: 4rem 0
+            }
+
+            @include breakpoint(phone) {
+              padding: 1rem 0;
+              @include fontSize(18px);
+            }
+
+            @include breakpoint(small-phone) {
+              @include fontSize(15px);
+            }
+          }
+        }
+
+        footer.logo {
+          max-width: 180px;
+          margin: 0 auto;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          @include noselect();
+
+          @include breakpoint(phone) {
+            max-width: 145px;
+          }
+
+          @include breakpoint(small-phone) {
+            max-width: 110px;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

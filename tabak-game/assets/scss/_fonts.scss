@@ -1,0 +1,16 @@
+@import "compass/css3/font-face";
+@import "variables";
+
+@include font-face($NeulandGrotesk-CondensedBold,
+        font-files("NeulandGrotesk-CondensedBold.woff",
+                "NeulandGrotesk-CondensedBold.ttf",
+                "NeulandGrotesk-CondensedBold.eot",
+                "NeulandGrotesk-CondensedBold.svg"));
+
+
+@include font-face($NeulandGrotesk-CondensedRegular,
+        font-files("NeulandGrotesk-CondensedRegular.woff",
+                "NeulandGrotesk-CondensedRegular.ttf",
+                "NeulandGrotesk-CondensedRegular.eot",
+                "NeulandGrotesk-CondensedRegular.svg"));
+
