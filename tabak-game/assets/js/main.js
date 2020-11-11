@@ -205,16 +205,16 @@ $(document).on("click", ".privacy__close", function () {
 	$.ube.hideRules();
 });
 
-$(document).ready(function () {
-	$(".screen-tel__form").ubeScanpackLogin("scanpack-casual-reg", function (result) {
-		if (result === "loginSuccess") {
-			console.log(1);
-			$(".screen-tel").removeClass("active");
-			$(".screen-denied").addClass("active");
-		} else if (result === "registered") {
-			console.log(2);
-			$(".screen-tel").removeClass("active");
-			$(".screen-success").addClass("active");
-		}
-	});
-});
+// $(document).ready(function () {
+// 	$(".screen-tel__form").ubeScanpackLogin("scanpack-casual-reg", function (result) {
+// 		if (result === "loginSuccess") {
+// 			console.log(1);
+// 			$(".screen-tel").removeClass("active");
+// 			$(".screen-denied").addClass("active");
+// 		} else if (result === "registered") {
+// 			console.log(2);
+// 			$(".screen-tel").removeClass("active");
+// 			$(".screen-success").addClass("active");
+// 		}
+// 	});
+// });

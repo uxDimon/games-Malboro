@@ -46,7 +46,6 @@ function hideCustomPopup() {
 }
 
 $(document).on("click", ".screen-photo .btn", function () {
-	console.log("000");
 	$("#scanface").addClass("active");
 	$("#scanface").ubeScanpackFace("scanpack-casual-reg", function (result) {
 		console.log(result);
@@ -56,11 +55,9 @@ $(document).on("click", ".screen-photo .btn", function () {
 			$(".screen-tel").addClass("active");
 			$(".screen-tel__form").ubeScanpackLogin("scanpack-casual-reg", function (result) {
 				if (result === "loginSuccess") {
-					console.log(1);
 					$(".screen-tel").removeClass("active");
 					$(".screen-denied").addClass("active");
 				} else if (result === "registered") {
-					console.log(2);
 					$(".screen-tel").removeClass("active");
 					$(".screen-success").addClass("active");
 				}
