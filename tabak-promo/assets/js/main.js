@@ -1,8 +1,10 @@
+let pathTabakGame = "../tabak-game/index.html";
+
 window.addEventListener("DOMContentLoaded", function () {
 	if (localStorage.getItem("isGameComplete") != "true") {
 		$(".screen-photo").addClass("active");
 	} else {
-		$(".screen-2").addClass("active");
+		window.location = pathTabakGame;
 	}
 });
 
@@ -71,5 +73,5 @@ $(document).on("click", ".privacy__close", function () {
 	$.ube.hideRules();
 });
 $(document).on("click", ".screen-denied .btn", function () {
-	window.location = "../tabak-game/index.html";
+	window.location = pathTabakGame;
 });
