@@ -170,6 +170,7 @@ $(document).ready(function () {
 		if (percentageHeal > percentageToWin) {
 			$(".game-win").fadeIn();
 			$(".container").hide();
+			localStorage.isGameComplete = true;
 			setTimeout(() => {
 				$(".game-win").hide();
 				$(".game-after").fadeIn();
