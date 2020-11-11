@@ -358,7 +358,7 @@ body main.wrapper {
 	width: 100%;
 	height: 100%;
 	text-align: center;
-	max-width: 37rem;
+	max-width: 560px;
 	margin: 0 auto;
 	position: relative;
 }
