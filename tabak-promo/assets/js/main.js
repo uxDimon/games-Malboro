@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
-	if (localStorage.getItem("isGameComplete") != true) {
+	if (localStorage.getItem("isGameComplete") != "true") {
 		$(".screen-photo").addClass("active");
 	} else {
 		$(".screen-2").addClass("active");
