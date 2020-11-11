@@ -70,3 +70,6 @@ $(document).on("click", ".screen-photo .btn", function () {
 $(document).on("click", ".privacy__close", function () {
 	$.ube.hideRules();
 });
+$(document).on("click", ".screen-denied .btn", function () {
+	window.location = "../tabak-game/index.html";
+});

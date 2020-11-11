@@ -18,7 +18,7 @@ $.ube = {
 $(document).ready(function () {
 	//Global Variables
 	var imageArr = []; //insert all images in this array to preload
-	var timerArray = [10, 10, 10];
+	var timerArray = [80, 110, 90];
 	var mouseDown_timer;
 	var percentageToWin = 99;
 	var maxLeaf = 108;
@@ -117,6 +117,7 @@ $(document).ready(function () {
 				$(".txt-to-hide").show();
 				$(".game-start").fadeIn();
 				$(".container").hide();
+				$(".game-after").hide();
 				addEventListeners();
 			});
 
@@ -128,8 +129,8 @@ $(document).ready(function () {
 				$(".txt-to-hide").show();
 				$(".game-start").fadeIn();
 				$(".game-win").hide();
-				$(".game-after").hide();
 				$(".container").show();
+				$(".game-after").hide();
 				addEventListeners();
 			});
 		});
