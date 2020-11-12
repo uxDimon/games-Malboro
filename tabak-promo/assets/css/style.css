@@ -438,9 +438,9 @@ section.screen-photo {
 	border-radius: 50%;
 	background: #bd3d04;
 	border: 2px solid #ffffff;
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	-moz-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
+	-webkit-box-shadow: 0px 0px 32px 0px #ffb898;
+	-moz-box-shadow: 0px 0px 32px 0px#ffb898;
+	box-shadow: 0px 0px 32px 0px#ffb898;
 	color: #fff;
 	text-shadow: 0px 0px 2px black;
 	font-weight: bold;
@@ -468,16 +468,16 @@ section.screen-photo .btn {
 	color: #ffffff;
 	font-size: 17px;
 	outline: none;
-	font-family: "DINPro";
+	font-family: "CenturyGothic";
 	text-transform: uppercase;
 	background: #bd3d04;
 	border: 2px solid #ffffff;
 	margin-top: 20px;
 	margin-bottom: 0;
 	padding: 0.5rem 2.5rem;
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	-moz-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
+	-webkit-box-shadow: 0px 0px 32px 0px #ffb898;
+	-moz-box-shadow: 0px 0px 32px 0px#ffb898;
+	box-shadow: 0px 0px 32px 0px#ffb898;
 }
 .screen-photo__bottom {
 	margin-top: auto;
@@ -607,15 +607,15 @@ section.screen-tel {
 	color: #ffffff;
 	font-size: 17px;
 	outline: none;
-	font-family: "DINPro";
+	font-family: "CenturyGothic";
 	text-transform: uppercase;
 	background: #bd3d04;
 	border: 2px solid #ffffff;
 	margin-bottom: 20px;
 	padding: 0.5rem 1.5rem;
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	-moz-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
+	-webkit-box-shadow: 0px 0px 32px 0px #ffb898;
+	-moz-box-shadow: 0px 0px 32px 0px#ffb898;
+	box-shadow: 0px 0px 32px 0px#ffb898;
 }
 .error-label,
 .ube-validation-message-for-lastName,
@@ -820,29 +820,29 @@ section.screen-denied .btn {
 	color: #ffffff;
 	font-size: 17px;
 	outline: none;
-	font-family: "DINPro";
+	font-family: "CenturyGothic";
 	text-transform: uppercase;
 	background: #bd3d04;
 	border: 2px solid #ffffff;
 	margin-bottom: 20px;
 	padding: 1.5rem 2rem;
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	-moz-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
+	-webkit-box-shadow: 0px 0px 32px 0px #ffb898;
+	-moz-box-shadow: 0px 0px 32px 0px#ffb898;
+	box-shadow: 0px 0px 32px 0px#ffb898;
 }
 .ube-registration-button {
 	color: #ffffff;
 	font-size: 17px;
 	outline: none;
-	font-family: "DINPro";
+	font-family: "CenturyGothic";
 	text-transform: uppercase;
 	background: #bd3d04;
 	border: 2px solid #ffffff;
 	margin-bottom: 20px;
 	padding: 1.5rem 2rem;
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	-moz-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
+	-webkit-box-shadow: 0px 0px 32px 0px #ffb898;
+	-moz-box-shadow: 0px 0px 32px 0px#ffb898;
+	box-shadow: 0px 0px 32px 0px#ffb898;
 }
 
 body main.wrapper .container {
@@ -882,7 +882,7 @@ body main.wrapper section.screen-2 button.btn-specs {
 	font-size: 27px;
 	font-size: 1.6875rem;
 	outline: none;
-	font-family: "DINPro";
+	font-family: "CenturyGothic";
 	text-transform: uppercase;
 	line-height: 110%;
 	font-weight: 100;
@@ -892,9 +892,9 @@ body main.wrapper section.screen-2 button.btn-specs {
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	-moz-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
+	-webkit-box-shadow: 0px 0px 32px 0px #ffb898;
+	-moz-box-shadow: 0px 0px 32px 0px#ffb898;
+	box-shadow: 0px 0px 32px 0px#ffb898;
 }
 @media only screen and (max-width: 600px) {
 	body main.wrapper section.screen-2 button.btn-specs {
@@ -1164,14 +1164,14 @@ body main.wrapper section.screen-2 .game-win footer.logo img {
 	color: #ffffff;
 	font-size: 17px;
 	outline: none;
-	font-family: "DINPro";
+	font-family: "CenturyGothic";
 	text-transform: uppercase;
 	background: #bd3d04;
 	border: 2px solid #ffffff;
 	padding: 0.8rem 2rem;
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	-moz-box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
-	box-shadow: 0px 0px 32px 0px rgba(189, 61, 4, 1);
+	-webkit-box-shadow: 0px 0px 32px 0px #ffb898;
+	-moz-box-shadow: 0px 0px 32px 0px#ffb898;
+	box-shadow: 0px 0px 32px 0px#ffb898;
 	display: flex;
 	align-items: center;
 	justify-content: center;
